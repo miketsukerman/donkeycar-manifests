@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- remotes -->
+
+  <remote name="yocto" fetch="https://git.yoctoproject.org" />
+  <remote name="oe" fetch="https://git.openembedded.org" />
+  <remote name="clang" fetch="https://github.com/kraj" />
+  <remote name="mkts" fetch="https://github.com/miketsukerman" />
+  <remote name="sbabic" fetch="https://github.com/sbabic" />
+  <remote name="ros" fetch="https://github.com/ros/" />
+  
+
+  <!-- List all the repositories you want to fetch -->
+  <!-- "name": git repository's name on hosting server
+       "remote": the remote host from above (if not the default)
+       "revision": commitish to checkout (if not the default)
+       "path": directory where git repository gets cloned/synced -->
+
+  <project name="poky" revision="refs/heads/kirkstone" path="geophone" remote="yocto" />
+  <project name="meta-raspberrypi" revision="refs/heads/kirkstone"  remote="yocto" path="donkeycar/meta-raspberrypi" />
+  <project name="meta-openembedded" revision="refs/heads/kirkstone"  remote="oe" path="donkeycar/meta-openembedded" />
+  <project name="meta-clang" revision="refs/heads/kirkstone"  remote="clang" path="donkeycar/meta-clang" />
+  <project name="meta-donkeycar" revision="refs/heads/kirkstone"  remote="zdev" path="donkeycar/meta-donkeycar" />
+  <project name="meta-swupdate" revision="refs/heads/kirkstone" remote="sbabic" path="donkeycar/meta-swupdate" />
+  <project name="meta-ros" revision="refs/heads/kirkstone" remote="mkts" path="donkeycar/meta-ros" />
+  <project name="meta-tensorflow" revision="refs/heads/kirkstone" remote="yocto" path="donkeycar/meta-ros" />
+
+</manifest>
